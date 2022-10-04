@@ -11,5 +11,18 @@ public class Product {
         Name="Null";
         Description="Null";
     }
-    //public Product(int ID,String Description , String Description)
+   /* public Product(int ID,String Name , String Description)
+    {
+        setID(ID);
+        setName(Name);
+        setDescription(Description);
+    } */
+    public int getID()
+        {
+            return ID;
+        }
+
+    public String getDescription() {
+        return Description;
+    }
 }
