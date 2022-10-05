@@ -3,26 +3,39 @@ package LabSheet7.Exercise1;
 public class Product {
 
     private int ID;
-    private String Name, Description;
+    private String Name;
+    public String Description;
 
-    public Product()
-    {
-        ID=0;
-        Name="Null";
-        Description="Null";
+    public Product() {
+        Name = "Null";
+        Description = "N/A";
     }
-   /* public Product(int ID,String Name , String Description)
-    {
-        setID(ID);
+
+    public Product(String Name, String Description) {
         setName(Name);
         setDescription(Description);
-    } */
-    public int getID()
-        {
-            return ID;
-        }
+    }
+
+
+    public String getName() {
+        return Name;
+    }
 
     public String getDescription() {
         return Description;
+    }
+
+    public void setDescription(String description) {
+        this.Description = description;
+    }
+
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+
+    public String toString() {
+        return "\nName: " + Name + "\nDescription: " + Description;
     }
 }
