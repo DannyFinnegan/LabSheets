@@ -1,41 +1,41 @@
 package LabSheet7.Exercise1;
 
 public class Product {
+    private int id;
+    private String name;
+    private String description;
+    private static int count = 1000000;
 
-    private int ID;
-    private String Name;
-    public String Description;
-
-    public Product() {
-        Name = "Null";
-        Description = "N/A";
+    public Product(String name, String description) {
+        setId();
+        setName(name);
+        setDescription(description);
     }
 
-    public Product(String Name, String Description) {
-        setName(Name);
-        setDescription(Description);
+    public int getId() {
+        return id;
     }
 
+    private void setId() {
+        this.id = ++count;
+    }
 
     public String getName() {
-        return Name;
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
-
     public void setDescription(String description) {
-        this.Description = description;
+        this.description = description;
     }
-
-
-    public void setName(String name) {
-        Name = name;
-    }
-
 
     public String toString() {
-        return "\nName: " + Name + "\nDescription: " + Description;
+        return "Product details are as follows: id: " + getId() + "  name: " + getName() + "  description: " + getDescription();
     }
 }

@@ -1,38 +1,41 @@
 package LabSheet7.Exercise1;
 
-
 public class LineItem {
-    private int ID, Quantity;
+    private int id;
+    private int quantity;
+    private Product product;
 
-    public LineItem() {
-        ID = 1;
-        Quantity = 0;
+    public LineItem(int id, int quantity, Product product) {
+        setId(id);
+        setQuantity(quantity);
+        setProduct(product);
     }
 
-    public LineItem(int Quantity) {
-        setQuantity(Quantity);
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getQuantity() {
-        return this.Quantity;
+        return quantity;
     }
 
-    public void setQuantity(int Quantity) {
-        this.Quantity = Quantity;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
-    public int getID() {
-        return ID;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setID(int ID) {
-        //this.ID = ID;
-        if (this.ID==ID) {
-            ID++;
-        }
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
     public String toString() {
-        return "\nID: " + ID + "\nQuantity: " + Quantity;
+        return "LineItem Details are as follows: \n\nid " + getId() + "\nquantity:" + getQuantity() + "\n" + getProduct() + "\n\n";
     }
 }
